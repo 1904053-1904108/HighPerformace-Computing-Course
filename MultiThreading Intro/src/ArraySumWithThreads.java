@@ -5,6 +5,9 @@ public class ArraySumWithThreads {
         int[] array = { 53, 04, 14, 37, 39, 10, 52, 59, 16, 61 };
         int numThreads = 4; // Number of threads to use
 
+        // Record the start time
+        long startTime = System.currentTimeMillis();
+
         // Create a thread pool with the specified number of threads
         ExecutorService executor = Executors.newFixedThreadPool(numThreads);
 
@@ -35,8 +38,13 @@ public class ArraySumWithThreads {
         // Shutdown the executor
         executor.shutdown();
 
-        // Print the final sum
+        // Record the end time
+        long endTime = System.currentTimeMillis();
+
+        // Calculate and print the total execution time
+        long totalTime = endTime - startTime;
         System.out.println("Sum of the array: " + sum);
+        System.out.println("Total execution time: " + totalTime + " milliseconds");
     }
 }
 

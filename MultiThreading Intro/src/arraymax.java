@@ -1,5 +1,7 @@
 
 //package OOPSinJAVA;
+//Author - Tutul Dhar -1904108
+
 import java.util.*;
 
 public class arraymax {
